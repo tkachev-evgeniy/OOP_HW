@@ -8,18 +8,19 @@ private:
     int a[SIZE];
     int n;
 public:
-    Stack() {
-        for (int i = 0; i<SIZE; i++) {
-            a[i]=0;
-        }
-        n =0;
-    }
 
     void reset () {
         for (int i = 0; i<SIZE; i++) {
             a[i]=0;
         }
         n=0;
+    }
+
+    Stack() {
+        for (int i = 0; i<SIZE; i++) {
+            a[i]=0;
+        }
+        n =0;
     }
 
     bool push (int b) {
@@ -38,7 +39,7 @@ public:
     bool pop() {
         if (n>0) {
             a[n-1]=0;
-            n=n-1;
+            n--;
             cout <<"Vurp!" << endl;
             return true;
         }
